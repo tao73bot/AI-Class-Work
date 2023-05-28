@@ -24,7 +24,7 @@ def minimax(depht, nodeIndex, maxPlayer, terminal, alpha, beta):
         move = MAX
 
         for i in range(0, 2):
-            val = minimax(depht + 1, nodeIndex * 2 + i, False, terminal, alpha, beta)
+            val = minimax(depht + 1, nodeIndex * 2 + i, True, terminal, alpha, beta)
             move = min(move, val)
             alpha = min(alpha, move)
 
